@@ -1,0 +1,23 @@
+$cubic: cubic-bezier(0.4, 0, 0.2, 1);
+
+$colors: (
+    "primary": #000,
+    "secondary": #9197B3,
+    'txt-accent': #757575,
+    'icon-clr': rgba(145, 151, 179, 1),
+    'icon-hover': rgba(255, 255, 255, 1),
+    'accent-hover': #5932EA,
+    'title-span': #838383,
+    'active-clr': #16C098,
+    'bgc-gray': #FAFBFF,
+    'bgc': #FFF,
+    'bgc-input': #F9FBFF,
+    'table-title': #B5B7C0,
+    'table-txt': #292d32,
+    'table-border': #EEE,
+    'page-clr': #404B52,
+);
+
+@function getColor($key) {
+    @return map-get($colors, $key);
+}

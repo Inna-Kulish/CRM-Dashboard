@@ -1,0 +1,81 @@
+.central-container {
+  padding: 41px 15px 258px 15px;
+
+  @include screen(desktop) {
+    padding: 41px 95px 258px 71px;
+  }
+}
+
+.welcome-title {
+  margin-bottom: 51px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.main-box {
+  min-width: 335px;
+  max-width: 968px;
+  padding: 30px 15px 40px 15px;
+  border-radius: 20px;
+  background-color: getColor('bgc');
+  filter: drop-shadow(0px 10px 60px rgba(226, 236, 249, 0.5));
+  overflow-x: auto;
+
+  @include screen(desktop) {
+    width: 968px;
+    padding: 30px 44px 40px 38px;
+  }
+}
+
+.filter-wrap {
+  @include flex(start);
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+
+  @include screen(desktop) {
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 40px;
+  }
+
+  h3 {
+    @include font(22px, 600, -0.22px);
+    margin-bottom: 7px;
+  }
+
+  a {
+    color: getColor('active-clr');
+    letter-spacing: -0.14px;
+  }
+}
+
+.label-search {
+  position: relative;
+  @include flex(center);
+  span {
+    position: absolute;
+    top: 7px;
+    left: 8px;
+  }
+
+  svg {
+    fill: none;
+    stroke: rgba(126, 126, 126, 1);
+  }
+
+  input {
+    padding: 10px 40px;
+    font-size: 12px;
+    letter-spacing: -0.12px;
+
+    border: none;
+    border-radius: 10px;
+    background-color: getColor('bgc-input');
+
+    &::placeholder {
+      color: #b5b7c0;
+    }
+  }
+}

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRM Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/modern-normalize/modern-normalize.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <main class="main">
+      <aside>
+        <div class="container-menu">
+          <div class="title-wrap">
+            <button
+              class="menu-toggle js-open-menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <svg
+                width="32"
+                height="22"
+                fill="none"
+                viewBox="0 0 32 22"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.34766 20.0431H30.8861M1.34766 10.7354H30.8861M1.34766 1.42773H30.8861"
+                  stroke="#2E2F42"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <svg width="37" height="37">
+              <use href="./img/icons.svg#icon-setting"></use>
+            </svg>
+            <h1 class="title">Dashboard<span>v.01</span></h1>
+          </div>
+          <div class="menu-wrap js-menu-container" id="mobile-menu">
+            <button class="menu-toggle js-close-menu close-btn" type="button">
+              <svg class="modal-icon" width="14" height="14">
+                <use href="./img/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+            <ul class="menu-list">
+              <li>
+                <a class="menu-link" href="">
+                  <svg width="24" height="24">
+                    <use href="./img/icons.svg#icon-key"></use>
+                  </svg>
+                  Dashboard
+                  <svg class="icon-arrow" width="16" height="16">
+                    <use href="./img/icons.svg#icon-chevron-right-2"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="menu-link" href="">
+                  <svg class="icon" width="24" height="24">
+                    <use href="./img/icons.svg#icon-square"></use>
+                  </svg>
+                  Product
+                  <svg class="icon-arrow" width="16" height="16">
+                    <use href="./img/icons.svg#icon-chevron-right-2"></use></svg
+                ></a>
+              </li>
+              <li>
+                <a class="menu-link" href="">
+                  <svg width="24" height="24">
+                    <use href="./img/icons.svg#icon-user"></use>
+                  </svg>
+                  Customers
+                  <svg class="icon-arrow" width="16" height="16">
+                    <use href="./img/icons.svg#icon-chevron-right-2"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="menu-link" href="">
+                  <svg width="24" height="24">
+                    <use href="./img/icons.svg#icon-wallet"></use>
+                  </svg>
+                  Income
+                  <svg class="icon-arrow" width="16" height="16">
+                    <use href="./img/icons.svg#icon-chevron-right-2"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="menu-link" href="">
+                  <svg class="icon" width="24" height="24">
+                    <use href="./img/icons.svg#icon-discount"></use>
+                  </svg>
+                  Promote
+                  <svg class="icon-arrow" width="16" height="16">
+                    <use href="./img/icons.svg#icon-chevron-right-2"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="menu-link" href="">
+                  <svg class="icon" width="24" height="24">
+                    <use href="./img/icons.svg#icon-message"></use>
+                  </svg>
+                  Help
+                  <svg class="icon-arrow" width="16" height="16">
+                    <use href="./img/icons.svg#icon-chevron-right-2"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <div class="user-wrap">
+              <picture>
+                <source
+                  srcset="./img/avatar@1x.png 1x, ./img/avatar@2x.png 2x"
+                />
+                <img
+                  src="./img/user@1x.png"
+                  alt="avatar"
+                  width="42"
+                  loading="lazy"
+                />
+              </picture>
+              <div class="user-desc">
+                <h4>Evano</h4>
+                <p>Project Manager</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div class="central-container">
+        <h2 class="welcome-title">Hello Evano 👋🏼,</h2>
+        <div class="main-box">
+          <div class="filter-wrap">
+            <div>
+              <h3>All Customers</h3>
+              <a href="">Active Members</a>
+            </div>
+            <label class="label-search" for="search">
+              <span>
+                <svg width="24" height="24">
+                  <use href="./img/icons.svg#icon-search"></use>
+                </svg>
+              </span>
+              <input name="search" type="text" placeholder="Search" />
+            </label>
+          </div>
+          <div class="table-wrap">
+            <table class="table">
+              <thead class="table-head">
+                <tr>
+                  <th>Cuctomer Name</th>
+                  <th>Company</th>
+                  <th>Phone Number</th>
+                  <th>Email</th>
+                  <th>Country</th>
+                  <th class="table-status">Status</th>
+                </tr>
+              </thead>
+              <tbody class="table-body">
+                <tr class="table-row">
+                  <td>Jane Cooper</td>
+                  <td>Microsoft</td>
+                  <td>(225) 555-0118</td>
+                  <td>jane@microsoft.com</td>
+                  <td>United States</td>
+                  <td class="status-row">
+                    <span class="user-status active">Active</span>
+                  </td>
+                </tr>
+                <tr class="table-row">
+                  <td>Floyd Miles</td>
+                  <td>Yahoo</td>
+                  <td>(205) 555-0100</td>
+                  <td>floyd@yahoo.com</td>
+                  <td>Kiribati</td>
+                  <td class="status-row">
+                    <span class="user-status inactive">Inactive</span>
+                  </td>
+                </tr>
+                <tr class="table-row">
+                  <td>Ronald Richards</td>
+                  <td>Adobe</td>
+                  <td>(302) 555-0107</td>
+                  <td>ronald@adobe.com</td>
+                  <td>Israel</td>
+                  <td class="status-row">
+                    <span class="user-status inactive">Inactive</span>
+                  </td>
+                </tr>
+                <tr class="table-row">
+                  <td>Marvin McKinney</td>
+                  <td>Tesla</td>
+                  <td>(252) 555-0126</td>
+                  <td>marvin@tesla.com</td>
+                  <td>Iran</td>
+                  <td class="status-row">
+                    <span class="user-status active">Active</span>
+                  </td>
+                </tr>
+                <tr class="table-row">
+                  <td>Jerome Bell</td>
+                  <td>Google</td>
+                  <td>(629) 555-0129</td>
+                  <td>jerome@google.com</td>
+                  <td>Réunion</td>
+                  <td class="status-row">
+                    <span class="user-status active">Active</span>
+                  </td>
+                </tr>
+                <tr class="table-row">
+                  <td>Kathryn Murphy</td>
+                  <td>Microsoft</td>
+                  <td>(406) 555-0120</td>
+                  <td>kathryn@microsoft.com</td>
+                  <td>Curaçao</td>
+                  <td class="status-row">
+                    <span class="user-status active">Active</span>
+                  </td>
+                </tr>
+                <tr class="table-row">
+                  <td>Jacob Jones</td>
+                  <td>Yahoo</td>
+                  <td>(208) 555-0112</td>
+                  <td>jacob@yahoo.com</td>
+                  <td>Brazil</td>
+                  <td class="status-row">
+                    <span class="user-status active">Active</span>
+                  </td>
+                </tr>
+                <tr class="table-row">
+                  <td>Kristin Watson</td>
+                  <td>Facebook</td>
+                  <td>(704) 555-0127</td>
+                  <td>kristin@facebook.com</td>
+                  <td>Åland Islands</td>
+                  <td class="status-row">
+                    <span class="user-status inactive">Inactive</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="pages-wrap">
+            <p>Showing data 1 to 8 of 256K entries</p>
+            <ul class="page-list">
+              <li>
+                <a class="page-link" href="">
+                  <svg width="8" height="12">
+                    <use href="./img/icons.svg#icon-chevron-left"></use></svg
+                ></a>
+              </li>
+              <li><a class="page-link" href="">1</a></li>
+              <li><a class="page-link" href="">2</a></li>
+              <li><a class="page-link" href="">3</a></li>
+              <li><a class="page-link" href="">4</a></li>
+              <li class="dots-item"><a class="page-dots" href="">...</a></li>
+              <li><a class="page-link" href="">40</a></li>
+              <li>
+                <a class="page-link" href="">
+                  <svg width="8" height="12">
+                    <use href="./img/icons.svg#icon-chevron-right"></use></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script defer src="js/mobile-menu.js"></script>
+  </body>
+</html>

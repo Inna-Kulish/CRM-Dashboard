@@ -1,0 +1,36 @@
+@mixin flex($a) {
+  display: flex;
+  align-items: $a;
+}
+
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin font($fs, $fw, $ls) {
+  font-size: $fs;
+  font-weight: $fw;
+  letter-spacing: $ls;
+}
+
+@mixin screen($size) {
+  $desktop: '(min-width: 1200px)';
+
+  $tablet: '(min-width: 768px)';
+  $mobi: '(min-width: 375px)';
+
+  @if $size == desktop {
+    @media only screen and #{$desktop} {
+      @content;
+    }
+  } @else if $size == tablet {
+    @media only screen and #{$tablet} {
+      @content;
+    }
+  } @else if $size == mobi {
+    @media only screen and #{$mobi} {
+      @content;
+    }
+  }
+}

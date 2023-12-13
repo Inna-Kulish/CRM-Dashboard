@@ -1,0 +1,149 @@
+.container-menu {
+  padding: 36px 15px 0 15px;
+
+  @include screen('desktop') {
+    @include size(306px, 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 36px 28px 76px 28px;
+
+    background-color: getColor('bgc');
+  }
+}
+
+.title-wrap {
+  @include flex(center);
+  gap: 8px;
+  margin-bottom: 65px;
+}
+
+.title {
+  @include font(26px, 600, 0.26px);
+
+  span {
+    margin-left: 4px;
+    @include font(10px, 500, -0.1px);
+    color: getColor('title-span');
+  }
+}
+
+.menu-wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media screen and (max-width: 1199px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 40px;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    background-color: getColor('bgc');
+
+    transform: translateX(-1000px);
+    transition: transform 300ms $cubic, opacity 300ms $cubic,
+      visibility 300ms $cubic;
+  }
+}
+
+.menu-wrap.is-open {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-list {
+  li {
+    margin-bottom: 17px;
+  }
+}
+
+.menu-link {
+  @include flex(center);
+  gap: 14px;
+  padding: 11px;
+
+  @include font(14px, 500, -0.14px);
+  color: getColor('secondary');
+  fill: getColor('secondary');
+  stroke: getColor('secondary');
+  border-radius: 8px;
+  transition: all 300ms $cubic;
+
+  .icon {
+    stroke: none;
+  }
+
+  &:hover,
+  &:focus {
+    fill: getColor('icon-hover');
+    stroke: getColor('icon-hover');
+    color: getColor('icon-hover');
+    background-color: getColor('accent-hover');
+  }
+}
+
+.icon-arrow {
+  margin-left: auto;
+}
+
+.user-wrap {
+  @include flex(center);
+  gap: 12px;
+  margin-top: auto;
+
+  h4 {
+    @include font(14px, 500, 0.14px);
+  }
+
+  p {
+    @include font(12px, 400, 0.12px);
+    color: getColor('txt-accent');
+  }
+}
+
+.js-open-menu {
+  @include flex(center);
+  justify-content: center;
+  margin-right: 10px;
+  padding: 0;
+  min-height: 22px;
+  min-width: 32px;
+
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@include screen(desktop) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.close-btn {
+  @media screen and (max-width: 1199px) {
+    @include flex(center);
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 5px;
+    fill: getColor('secondary');
+    border: 1px solid getColor('secondary');
+    border-radius: 4px;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      fill: getColor('icon-hover');
+      background-color: getColor('accent-hover');
+      border-color: getColor('accent-hover');
+    }
+  }
+}

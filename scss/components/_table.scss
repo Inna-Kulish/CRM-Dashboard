@@ -1,0 +1,97 @@
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 30px;
+  table-layout: fixed;
+  white-space: nowrap;
+
+  overflow-x: auto;
+  text-align: left;
+  border-collapse: collapse;
+  border-bottom: 1px solid getColor('table-border');
+}
+
+td:first-child,
+th:first-child {
+  width: 172px;
+}
+
+td:nth-child(2),
+th:nth-child(2) {
+  width: 131px;
+}
+
+td:nth-child(3),
+th:nth-child(3) {
+  width: 156px;
+}
+
+td:nth-child(4),
+th:nth-child(4) {
+  width: 207px;
+}
+
+td:nth-child(5),
+th:nth-child(5) {
+  width: 140px;
+}
+
+td:last-child,
+th:last-child {
+  width: 80px;
+  text-align: center;
+}
+
+.table-head {
+  color: getColor('table-title');
+  border-bottom: 1px solid getColor('table-border');
+
+  th {
+    padding: 0 15px 14px 0;
+    font-weight: 500;
+    letter-spacing: -0.14px;
+
+    @include screen(desktop) {
+      padding: 0 0 14px 0;
+    }
+  }
+}
+
+.table-body {
+  @include font(14px, 500, -0.14px);
+  color: getColor('table-txt');
+
+  tr {
+    border-bottom: 1px solid getColor('table-border');
+  }
+
+  td {
+    padding: 20px 15px 20px 0;
+
+    @include screen(desktop) {
+      padding: 20px 0;
+    }
+  }
+}
+
+.user-status {
+  display: block;
+  width: 80px;
+  padding: 4px 12px;
+  text-align: center;
+  @include font(14px, 500, -0.14px);
+
+  border-radius: 4px;
+}
+
+.user-status.active {
+  color: #008767;
+  border: 1px solid #00b087;
+  background: rgba(22, 192, 152, 0.38);
+}
+
+.user-status.inactive {
+  color: #df0404;
+  border: 1px solid #df0404;
+  background: #ffc5c5;
+}
